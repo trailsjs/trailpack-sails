@@ -27,10 +27,10 @@ module.exports = {
 
 [npm-image]: https://img.shields.io/npm/v/trailpack-sails.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/trailpack-sails
-[ci-image]: https://img.shields.io/travis//trailpack-sails/master.svg?style=flat-square
-[ci-url]: https://travis-ci.org//trailpack-sails
-[daviddm-image]: http://img.shields.io/david//trailpack-sails.svg?style=flat-square
-[daviddm-url]: https://david-dm.org//trailpack-sails
-[codeclimate-image]: https://img.shields.io/codeclimate/github//trailpack-sails.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github//trailpack-sails
+[ci-image]: https://img.shields.io/travis/trailsjs/trailpack-sails/master.svg?style=flat-square
+[ci-url]: https://travis-ci.org/trailsjs/trailpack-sails
+[daviddm-image]: http://img.shields.io/david/trailsjs/trailpack-sails.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/trailsjs/trailpack-sails
+[codeclimate-image]: https://img.shields.io/codeclimate/github/trailsjs/trailpack-sails.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/trailsjs/trailpack-sails
 
