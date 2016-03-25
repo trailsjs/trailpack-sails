@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "",
   "author": {
-    "name": "Travis Webb",
+    "name": "Trails.js Team",
     "email": "hello@trailsjs.io",
     "url": "trailsjs.io"
   },
@@ -12,7 +12,9 @@
   "keywords": [
     "trailpack",
     "trails",
-    "trailjs"
+    "trailjs",
+    "sails",
+    "sailsjs"
   ],
   "dependencies": {
     "trailpack": "latest"
