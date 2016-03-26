@@ -4,18 +4,34 @@ const Trailpack = require('trailpack')
 
 module.exports = class SailsTrailpack extends Trailpack {
 
-  /**
-   * TODO document method
-   */
   validate () {
+    const result = joi.validate(config, joi.object().keys({
+      apps: joi.object()
+    }))
 
+    if (result.error) {
+      this.log.error('The configuration for trailpack-sails does not look correct')
+      this.log.error('Please double-check config/sails.js')
+      this.log.error(result.error)
+      return Promise.reject()
+    }
   }
 
   /**
    * TODO document method
    */
   configure () {
+    const sailsConfig = this.app.config.sails
 
+    this.appConfig = Object.keys(sailsConfig.apps).map((appName, i) => {
+      const appConfig = sailsConfig.apps[appName]
+
+      return {
+        appPath: appConfig.path,
+        port: 
+        proxyPort: this.app.web.port
+      }
+    })
   }
 
   /**

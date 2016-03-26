@@ -17,6 +17,7 @@
     "sailsjs"
   ],
   "dependencies": {
+    "joi": "^8.0.5",
     "trailpack": "latest"
   },
   "devDependencies": {
