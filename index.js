@@ -1,11 +1,12 @@
 'use strict'
 
+const joi = require('joi')
 const Trailpack = require('trailpack')
 
 module.exports = class SailsTrailpack extends Trailpack {
 
   validate () {
-    const result = joi.validate(config, joi.object().keys({
+    const result = joi.validate(this.app.config.sails, joi.object().keys({
       apps: joi.object()
     }))
 
@@ -28,7 +29,7 @@ module.exports = class SailsTrailpack extends Trailpack {
 
       return {
         appPath: appConfig.path,
-        port: 
+        //port:
         proxyPort: this.app.web.port
       }
     })
