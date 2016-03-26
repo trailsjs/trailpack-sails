@@ -45,18 +45,27 @@ module.exports = {
        * you can use require.resolve().
        * npm install --save my-sails-app
        */
-      path: require.resolve('my-sails-app'),
+      appPath: require.resolve('my-sails-app'),
+
+      /**
+       * By default, a socket file will be created in the Trails app's temp
+       * folder, i.e. path.resolve(config.main.paths.temp, 'sockets', ${appName}.sock).
+       * You typically won't need to change this.
+       */
+      socketPath: '/tmp/mySailsApp.sock',
 
       /**
        * The route on which to mount the Sails application. e.g. for prefix=sails,
        * the request /myapp/user?username=trails to Trails will be routed to
-       * /user?username=trails in the Sails Application.
+       * /user?username=trails in the Sails Application. Any prefix defined in
+       * Trails Footprints will not be applied to this path.
        */
       prefix: 'myapp',
 
       /**
        * Export the Sails app instance on the Trails context. Setting this to 'true'
-       * would make available the property 'this.sails'
+       * would make available the property 'this.sails' in controllers and services.
+       */
       export: false
     },
 
@@ -65,6 +74,15 @@ module.exports = {
     }
   }
 ```
+
+## Why?
+
+[Trails](http://trailsjs.io) was created as the successor to Sails.js. While
+the conventions and patterns are very similar, the underlying technologies are
+vastly different. Much of your existing Sails knowledge and experience can be
+applied to Trails, but your old Sails.js application code cannot. This Trailpack
+offers the ability to extend and upgrade your current Sails app, unencumbered
+by a lengthy migration process.
 
 <img src="http://i.imgur.com/dCjNisP.png">
 
