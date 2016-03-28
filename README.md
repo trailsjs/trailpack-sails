@@ -37,42 +37,41 @@ module.exports = {
 // config/sails.js
 module.exports = {
 
-  apps: {
-    mySailsApp: {
+  mySailsApp: {
 
-      /**
-       * The filesystem path to the Sails Application. If installed via npm,
-       * you can use require.resolve().
-       * npm install --save my-sails-app
-       */
-      appPath: require.resolve('my-sails-app'),
+    /**
+     * The filesystem path to the Sails Application. If installed via npm,
+     * you can use require.resolve().
+     * npm install --save my-sails-app
+     */
+    appPath: require.resolve('my-sails-app'),
 
-      /**
-       * By default, a socket file will be created in the Trails app's temp
-       * folder, i.e. path.resolve(config.main.paths.temp, 'sockets', ${appName}.sock).
-       * You typically won't need to change this.
-       */
-      socketPath: '/tmp/mySailsApp.sock',
+    /**
+     * By default, a socket file will be created in the Trails app's temp
+     * folder, i.e. path.resolve(config.main.paths.temp, 'sockets', ${appName}.sock).
+     * You typically won't need to change this.
+     */
+    socketPath: '/tmp/mySailsApp.sock',
 
-      /**
-       * The route on which to mount the Sails application. e.g. for prefix=sails,
-       * the request /myapp/user?username=trails to Trails will be routed to
-       * /user?username=trails in the Sails Application. Any prefix defined in
-       * Trails Footprints will not be applied to this path.
-       */
-      prefix: 'myapp',
+    /**
+     * The route on which to mount the Sails application. e.g. for prefix=sails,
+     * the request /myapp/user?username=trails to Trails will be routed to
+     * /user?username=trails in the Sails Application. Any prefix defined in
+     * Trails Footprints will not be applied to this path.
+     */
+    prefix: 'myapp',
 
-      /**
-       * Export the Sails app instance on the Trails context. Setting this to 'true'
-       * would make available the property 'this.sails' in controllers and services.
-       */
-      export: false
-    },
+    /**
+     * Export the Sails app instance on the Trails context. Setting this to 'true'
+     * would make available the property 'this.sails' in controllers and services.
+     */
+    export: false
+  },
 
-    anotherSailsApp: {
-      // etc ...
-    }
+  anotherSailsApp: {
+    // etc ...
   }
+}
 ```
 
 ## Why?

@@ -5,7 +5,7 @@ const smokesignals = require('smokesignals')
 
 module.exports = _.defaultsDeep({
   pkg: {
-    name: require('../package').name + '-test'
+    name: require('../../package').name + '-test'
   },
   api: {
     models: { },
@@ -17,8 +17,16 @@ module.exports = _.defaultsDeep({
       packs: [
         smokesignals.Trailpack,
         require('trailpack-core'),
-        require('../')
+        require('../../')
       ]
+    },
+    log: {
+      logger: new smokesignals.Logger('silly')
+    },
+    sails: {
+      testapp: {
+        appPath: require.resolve('./sailsapp')
+      }
     }
   }
 }, smokesignals.FailsafeConfig)

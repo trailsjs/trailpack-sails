@@ -1,4 +1,4 @@
-test/index.js test/trailpack.test.js test/unit test/integration
+test/trailpack.test.js test/unit test/integration
 --reporter spec
 --full-trace
 --no-exit
